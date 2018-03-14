@@ -9,7 +9,7 @@ class Artist
     @songs
   end
   def add_song(song)
-    #@songs << song
+    @songs << song
   end
   def print_songs
     @songs.each do |song|
