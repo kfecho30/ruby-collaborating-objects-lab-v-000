@@ -1,6 +1,5 @@
 class Artist
   attr_accessor :name
-  @songs = []
   @@all = []
   def initialize(name)
     @name = name
@@ -9,6 +8,7 @@ class Artist
     @songs
   end
   def add_song(song)
+    @songs = []
     @songs << song
   end
   def print_songs
@@ -17,7 +17,7 @@ class Artist
     end
   end
   def self.find_or_create_by_name(name)
-    Artist.all.name.include?(name) ? "x" :Artist.new(name)
+    Artist.all.each {|artist| }
   end
   def save
     @@all << self
