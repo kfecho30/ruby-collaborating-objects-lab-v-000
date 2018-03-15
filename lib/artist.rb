@@ -17,7 +17,8 @@ class Artist
     end
   end
   def self.find_or_create_by_name(name)
-    Artist.all.each {|artist| }
+    Artist.all.detect {|a| a.name == name} || artist = self.new(name)
+    artist
   end
   def save
     @@all << self
